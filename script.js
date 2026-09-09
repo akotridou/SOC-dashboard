@@ -17,6 +17,7 @@ fetch("incidents.json")
   .then((data) => {
 
     incidentsData = data;
+
     let critical = 0;
     let high = 0;
     let medium = 0;
@@ -37,8 +38,8 @@ fetch("incidents.json")
       else {
         low++;
       }
-
     });
+
     spancrit.textContent = critical;
     spanhigh.textContent = high;
     spanmed.textContent = medium;
@@ -47,19 +48,24 @@ fetch("incidents.json")
     displayIncidents(data);
   });
 
-//for displaying the incidents in the cards
+
+// for displaying the incidents in the cards
 function displayIncidents(incidents) {
+
   eventsContainer.innerHTML = "";
 
   if (incidents.length === 0) {
+
     const errorMessage = document.createElement("p");
     errorMessage.className = "error-message";
     errorMessage.textContent = "No incidents found.";
     eventsContainer.appendChild(errorMessage);
+
     return;
   }
 
   incidents.forEach(incident => {
+
     const eventCard = document.createElement("div");
     eventCard.className = incident.Severity.toLowerCase();
     eventCard.innerHTML = `
@@ -73,33 +79,50 @@ function displayIncidents(incidents) {
   });
 }
 
-//for filtering!
-filtersec.addEventListener("change", () => {
-  const selectedfilter = filtersec.value;
-  const filteredIncidents = incidentsData.filter(incident => {
-    return selectedfilter === "All" ||
-           incident.Severity === selectedfilter;
 
+// filtering + searching
+function filterAndSearch() {
+
+  const selectedfilter = filtersec.value;
+  const searchTerm = incinput.value.trim().toLowerCase();
+
+  const filteredIncidents = incidentsData.filter(incident => {
+
+    const matchesFilter =
+      selectedfilter === "All" ||
+      incident.Severity === selectedfilter;
+
+    const text =
+      incident.Description.toLowerCase() + " " +
+      incident.Severity.toLowerCase();
+
+    const matchesSearch =
+      searchTerm === "" ||
+      text.split(/\s+/).includes(searchTerm);
+
+    return matchesFilter && matchesSearch;
   });
 
   displayIncidents(filteredIncidents);
+}
 
+
+// for filtering
+filtersec.addEventListener("change", () => {
+  filterAndSearch();
 });
 
 
-//for searching
+// for searching
 searchbtn.addEventListener("click", (event) => {
   event.preventDefault();
-  const searchTerm = incinput.value.trim();
-  const searchedIncidents = incidentsData.filter(incident => {
+  filterAndSearch();
 
-    return incident.Description
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase()) || incident.Severity
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
-  });
+});
 
-  displayIncidents(searchedIncidents);
-
+incinput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    filterAndSearch();
+  }
 });
