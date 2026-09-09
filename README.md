@@ -2,7 +2,7 @@
 
 A responsive web dashboard designed to simulate a Security Operations Center (SOC) monitoring interface. It provides visibility into real-time security events, categorizes incidents by severity, and offers quick search and filtering capabilities.
 
-🔗 **Live Demo:** [Insert Your Live URL Here](https://akotridou.github.io/SOC-dashboard/)
+🔗 **Live Demo:** (https://akotridou.github.io/SOC-dashboard/)
 
 ---
 
