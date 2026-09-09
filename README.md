@@ -19,8 +19,8 @@ A responsive web dashboard designed to simulate a Security Operations Center (SO
 
 ## 🛠️ Built With
 
-- **HTML:** 
-- **CSS:** 
-- **JavaScript (Vanilla):** 
-- **AOS (Animate On Scroll):** 
+- **HTML** 
+- **CSS** 
+- **JavaScript (Vanilla)** 
+- **AOS (Animate On Scroll)** 
 
