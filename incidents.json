@@ -1,0 +1,122 @@
+[
+  {
+    "id": "INC001",
+    "Severity": "Critical",
+    "Description": "Multiple failed login attempts detected from the same IP address.",
+    "Date": "2026-09-09"
+  },
+  {
+    "id": "INC002",
+    "Severity": "High",
+    "Description": "Suspicious PowerShell commands were detected on an internal workstation.",
+    "Date": "2026-09-09"
+  },
+  {
+    "id": "INC003",
+    "Severity": "Medium",
+    "Description": "Unusual outbound network traffic was detected from a workstation.",
+    "Date": "2026-09-08"
+  },
+  {
+    "id": "INC004",
+    "Severity": "Low",
+    "Description": "A scheduled antivirus scan completed successfully with no threats detected.",
+    "Date": "2026-09-08"
+  },
+  {
+    "id": "INC005",
+    "Severity": "High",
+    "Description": "A suspicious email containing a potentially malicious link was reported by a user.",
+    "Date": "2026-09-07"
+  },
+  {
+    "id": "INC006",
+    "Severity": "Critical",
+    "Description": "Unauthorized attempt to delete Volume Shadow Copies (vssadmin) on Finance server.",
+    "Date": "2026-09-07"
+  },
+  {
+    "id": "INC007",
+    "Severity": "Medium",
+    "Description": "Port scan activity detected targeting internal subnet 192.168.1.0/24.",
+    "Date": "2026-09-06"
+  },
+  {
+    "id": "INC008",
+    "Severity": "High",
+    "Description": "New account added to Domain Admins group outside change management hours.",
+    "Date": "2026-09-06"
+  },
+  {
+    "id": "INC009",
+    "Severity": "Low",
+    "Description": "SSL/TLS certificate for internal portal expires in 7 days.",
+    "Date": "2026-09-05"
+  },
+  {
+    "id": "INC010",
+    "Severity": "Medium",
+    "Description": "Multiple DNS queries to newly registered and high-risk dynamic domains.",
+    "Date": "2026-09-05"
+  },
+  {
+    "id": "INC011",
+    "Severity": "Critical",
+    "Description": "Potential ransomware execution: bulk file renaming with unknown extensions detected.",
+    "Date": "2026-09-05"
+  },
+  {
+    "id": "INC012",
+    "Severity": "High",
+    "Description": "MFA fatigue attack suspected: 15 consecutive push notifications sent to single user.",
+    "Date": "2026-09-04"
+  },
+  {
+    "id": "INC013",
+    "Severity": "Low",
+    "Description": "User account unlocked following automated password self-service reset.",
+    "Date": "2026-09-04"
+  },
+  {
+    "id": "INC014",
+    "Severity": "Medium",
+    "Description": "Unapproved remote desktop application (AnyDesk) initiated from marketing laptop.",
+    "Date": "2026-09-03"
+  },
+  {
+    "id": "INC015",
+    "Severity": "Critical",
+    "Description": "Data exfiltration alert: 12GB uploaded to unauthorized cloud storage provider.",
+    "Date": "2026-09-03"
+  },
+  {
+    "id": "INC016",
+    "Severity": "Low",
+    "Description": "Endpoint compliance warning: Windows security updates pending install on 3 hosts.",
+    "Date": "2026-09-02"
+  },
+  {
+    "id": "INC017",
+    "Severity": "High",
+    "Description": "SQL Injection attempt identified and blocked by Web Application Firewall (WAF).",
+    "Date": "2026-09-02"
+  },
+  {
+    "id": "INC018",
+    "Severity": "Medium",
+    "Description": "Unauthorized USB mass storage device connected to engineering terminal.",
+    "Date": "2026-09-01"
+  },
+  {
+    "id": "INC019",
+    "Severity": "Low",
+    "Description": "Default router credentials detected on newly deployed staging switch.",
+    "Date": "2026-09-01"
+  },
+  {
+    "id": "INC020",
+    "Severity": "High",
+    "Description": "Brute force attack blocked against external SSH gateway from IP 198.51.100.24.",
+    "Date": "2026-08-31"
+  }
+]

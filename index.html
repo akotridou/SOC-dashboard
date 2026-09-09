@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secutiry Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Security Monitor</h1>
+        <p>Security Operations Center Dashboard</p>
+    </header>
+
+    <section class="system-status">
+         <h2>System Status</h2>
+         <p id="status">ONLINE</p>
+    </section>
+
+    <div class="static-cards">
+        <div class="static-card">
+            <h2>Critical</h2>
+            <span id="critical">0</span>
+        </div>
+         <div class="static-card">
+            <h2>High</h2>
+            <span id="high">0</span>
+        </div>
+         <div class="static-card">
+            <h2>Medium</h2>
+            <span id="medium">0</span>
+        </div>
+         <div class="static-card">
+            <h2>Low</h2>
+            <span id="low">0</span>
+        </div>
+    </div>
+
+      <section class="search">
+        <h2>Search incidents...</h2>
+        <input type="text" id="incinput" placeholder="Search by keyword...">
+        <a href="#" id="search-btn">Search</a>
+    </section>
+
+    <section class="filter">
+        <label for="filter-drop">Filter by severity</label>
+        <select id="filter-drop">
+             <option>All</option>
+             <option>Critical</option>
+             <option>High</option>
+             <option>Medium</option>
+             <option>Low</option>
+        </select>
+    </section>
+
+    <section id="security-events">
+        <h2>Recent Security Events</h2>
+        <div id="events-container"></div>
+    </section>
+
+  
+
+   
+   
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false,      
+      mirror: true,     
+      offset: 100
+  });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
